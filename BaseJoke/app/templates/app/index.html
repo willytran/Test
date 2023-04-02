@@ -1,0 +1,20 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="title">List of quotes</h1>
+    <ul class="quote-list">
+      {% for quote in quotes %}
+        <li class="quote-item {% if highlight == quote.id %}highlighted{% endif %}">
+          <div class="quote-text">{{ quote.text }}</div>
+          <div class="quote-meta">{{ quote.author }}</div>
+          <div class="quote-share">
+            <a href="{% url 'app:get_user_entry' id=quote.id %}" target="_blank">Share</a>
+          </div>
+        </li>
+      {% empty %}
+        <li>No jokes yet</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
