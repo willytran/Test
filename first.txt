@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-Hello world
-=======
-Coucou monde
->>>>>>> 901deb09cf605b434c768111a831cf71b377da18
